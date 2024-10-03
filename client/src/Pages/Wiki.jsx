@@ -1,137 +1,71 @@
-import React from 'react'
+import React from 'react';
 
-const posts = [
-    {
-      id: 1,
-      title: 'Boost your conversion rate',
-      href: '#',
-      date: 'Mar 16, 2020',
-      datetime: '2020-03-16',
-      thumbnail: 'https://images.unsplash.com/photo-1726402919430-a4521f2b1fa6?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      category: { title: 'Marketing', href: '#' },
-      author: {
-        name: 'Michael Foster',
-        role: 'Co-Founder / CTO',
-        href: '#',
-        imageUrl:
-          'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-      },
-    },
-    {
-        id: 1,
-        title: 'Boost your conversion rate',
-        href: '#',
-        date: 'Mar 16, 2020',
-        datetime: '2020-03-16',
-        thumbnail: 'https://images.unsplash.com/photo-1726402919430-a4521f2b1fa6?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        category: { title: 'Marketing', href: '#' },
-        author: {
-          name: 'Michael Foster',
-          role: 'Co-Founder / CTO',
-          href: '#',
-          imageUrl:
-            'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-        },
-      },
-      {
-        id: 1,
-        title: 'Boost your conversion rate',
-        href: '#',
-        date: 'Mar 16, 2020',
-        datetime: '2020-03-16',
-        thumbnail: 'https://images.unsplash.com/photo-1726402919430-a4521f2b1fa6?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        category: { title: 'Marketing', href: '#' },
-        author: {
-          name: 'Michael Foster',
-          role: 'Co-Founder / CTO',
-          href: '#',
-          imageUrl:
-            'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-        },
-      },
-      {
-        id: 1,
-        title: 'Boost your conversion rate',
-        href: '#',
-        date: 'Mar 16, 2020',
-        datetime: '2020-03-16',
-        thumbnail: 'https://images.unsplash.com/photo-1726402919430-a4521f2b1fa6?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        category: { title: 'Marketing', href: '#' },
-        author: {
-          name: 'Michael Foster',
-          role: 'Co-Founder / CTO',
-          href: '#',
-          imageUrl:
-            'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-        },
-      },
-      {
-        id: 1,
-        title: 'Boost your conversion rate',
-        href: '#',
-        date: 'Mar 16, 2020',
-        datetime: '2020-03-16',
-        thumbnail: 'https://images.unsplash.com/photo-1726402919430-a4521f2b1fa6?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        category: { title: 'Marketing', href: '#' },
-        author: {
-          name: 'Michael Foster',
-          role: 'Co-Founder / CTO',
-          href: '#',
-          imageUrl:
-            'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-        },
-      },
-    
-  ]
-  
-  export default function Example() {
-    return (
-      <div className="bg-white py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">WIKIS</h2>
-          </div>
-          <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-            {posts.map((post) => (
-              <article key={post.id} className="flex max-w-xl flex-col items-start justify-between ">
-                <div>
-                <img alt="" src={post.thumbnail} className="rounded-3xl h-64 w-96" />
-                </div>
-                <div className="flex items-center gap-x-4 text-xs">
-                  <time dateTime={post.datetime} className="text-gray-500">
-                    {post.date}
-                  </time>
-                  <a
-                    href={post.category.href}
-                    className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
-                  >
-                    {post.category.title}
-                  </a>
-                </div>
-                <div className="group relative">
-                  <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                    <a href={post.href}>
-                      <span className="absolute inset-0" />
-                      {post.title}
-                    </a>
-                  </h3>
-                </div>
-                <div className="relative mt-8 flex items-center gap-x-4">
-                  <img alt="" src={post.author.imageUrl} className="h-10 w-10 rounded-full bg-gray-50" />
-                  <div className="text-sm leading-6">
-                    <p className="font-semibold text-gray-900">
-                      <a href={post.author.href}>
-                        <span className="absolute inset-0" />
-                        {post.author.name}
-                      </a>
-                    </p>
-                    <p className="text-gray-600">{post.author.role}</p>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
+const wikiData = [
+  {
+    title: "The Origins of Quantum Physics",
+    content: "Quantum physics revolutionized how we understand the universe on the smallest scales. Explore the history and discoveries of this fascinating field.",
+    image: "https://cdn.mos.cms.futurecdn.net/R8Bfi2Thwq7cnTabi4J2pE.jpg",
+    link: "https://example.com/quantum-physics",
+  },
+  {
+    title: "Ancient Civilizations: Mysteries and Wonders",
+    content: "Ancient civilizations like the Egyptians, Mayans, and Greeks have left us with incredible legacies and unsolved mysteries.",
+    image: "https://media.licdn.com/dms/image/D5612AQHO_56hf1NRBw/article-cover_image-shrink_720_1280/0/1714548193525?e=2147483647&v=beta&t=0_Xxu9uOQpRUKLrf73PkjJbaC-9s5SOcAFisk3kPThE",
+    link: "https://example.com/ancient-civilizations",
+  },
+  {
+    title: "The Art of Japanese Calligraphy",
+    content: "Japanese calligraphy is more than just writing—it's a revered art form with deep cultural significance.",
+    image: "https://www.invaluable.com/blog/wp-content/uploads/sites/77/2018/09/hero-image-2-1.jpg",
+    link: "https://example.com/japanese-calligraphy",
+  },
+  {
+    title: "Cryptography: Secrets of Secure Communication",
+    content: "From Caesar ciphers to modern encryption, cryptography has been key to securing communication through the ages.",
+    image: "https://kinsta.com/wp-content/uploads/2023/07/what-is-encryption.jpg",
+    link: "https://example.com/cryptography",
+  },
+  {
+    title: "The Human Brain: A Complex Mystery",
+    content: "The human brain is the most complex structure in the known universe, responsible for everything we think, feel, and do.",
+    image: "https://naturalsciences.uoregon.edu/sites/default/files/styles/custom_xl/public/2024-03/neuroscience_home_lead.png?itok=mho-68BV",
+    link: "https://example.com/human-brain",
+  },
+];
+
+const Card = ({ title, content, image, link }) => (
+  <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white m-4 transform hover:scale-105 transition-transform duration-300 ease-in-out">
+    <img className="w-full h-48 object-cover" src={image} alt={title} />
+    <div className="px-6 py-4">
+      <div className="font-bold text-xl mb-2">{title}</div>
+      <p className="text-gray-700 text-base">{content}</p>
+    </div>
+    <div className="px-6 pt-4 pb-2">
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block bg-blue-500 text-white rounded-full px-3 py-1 text-sm font-semibold hover:bg-blue-700"
+      >
+        Learn More
+      </a>
+    </div>
+  </div>
+);
+
+function Wiki() {
+  return (
+    <div className="min-h-screen bg-gray-100 p-8">
+      <h1 className="text-3xl font-bold text-center mb-8">Wiki Topics</h1>
+      <div className="flex flex-wrap justify-center">
+        {wikiData.map((item, index) => (
+          <Card key={index} title={item.title} content={item.content} image={item.image} link={item.link} />
+        ))}
       </div>
-    )
-  }
+    </div>
+  );
+}
+
+export default Wiki;
+
+
